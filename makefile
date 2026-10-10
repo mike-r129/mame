@@ -553,7 +553,7 @@ OVERRIDE_LD := $(WBX_CC)
 
 ARCHOPTS := -I$(WBX_DIR)/emulibc -I$(WBX_DIR)/libco \
 	-fvisibility=hidden -mcmodel=large -mstack-protector-guard=global \
-	-fno-pic -fno-pie -fcf-protection=none -MP $(ARCHOPTS)
+	-fno-pic -fno-pie -fcf-protection=none -mno-red-zone -MP $(ARCHOPTS)
 
 ARCHOPTS_CXX := -I$(WBX_SYSROOT)/include/c++/v1 \
 	-fno-use-cxa-atexit -fvisibility-inlines-hidden $(ARCHOPTS_CXX)
